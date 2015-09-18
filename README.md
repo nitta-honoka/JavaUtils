@@ -10,5 +10,5 @@ I do develop these to avoid a large of repeating function code, following the ef
 
 ##Contact me
 作者：Nitta Honoka  
-博客：http://www.honoka.me  
+博客：http://honoka.cnblogs.com  
 E-MAIL: xal2008sc@gmail.com  
