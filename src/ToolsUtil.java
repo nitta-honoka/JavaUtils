@@ -1,5 +1,5 @@
 /**
- * 常用工具类
+ * 常用功能工具类
  * @author honoka
  */
 public class ToolUtil {
