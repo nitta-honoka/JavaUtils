@@ -5,8 +5,13 @@ I do develop these to avoid a large of repeating function code, following the ef
 个人开发用的Java常用工具类的集合。  
 主要用于封装 J2EE 开发过程中的常见操作，避免大量的重复功能代码，提升开发效率，并降低耦合。
 ##Guide
+- src/StringUtil.java：字符串处理工具类
+- src/ToolsUtil.java：常用功能工具类
 
 ##Logs
+- v0.01 - 20150923
+ + 字符串工具类初始化
+ + 常用功能工具类增加**非空判断**方法
 
 ##Contact me
 作者：Nitta Honoka  

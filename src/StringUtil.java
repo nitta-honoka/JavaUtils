@@ -1,19 +1,19 @@
 /**
- * ´¦Àí×Ö·û´®
+ * å¤„ç†å­—ç¬¦ä¸²
  * @author honoka
  */
 public final class StringUtil {
-  //Ğ¡Ğ´³£Á¿
+  //å°å†™å¸¸é‡
   public static final StringFormatConstants LOWER_CASE = StringFormatConstants.LOWER_CASE;
 
-  //´óĞ´³£Á¿
+  //å¤§å†™å¸¸é‡
   public static final StringFormatConstants UPPER_CASE = StringFormatConstants.UPPER_CASE;
 
-  //×Ö·û´®´¦Àí³£Á¿Ã¶¾Ù
+  //å­—ç¬¦ä¸²å¤„ç†å¸¸é‡æšä¸¾
   private enum StringFormatConstants {
-	  //Ğ¡Ğ´
+	  //å°å†™
 	  LOWER_CASE,
-	  //´óĞ´
+	  //å¤§å†™
 	  UPPER_CASE;
   }
 }
