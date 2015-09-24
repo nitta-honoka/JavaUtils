@@ -4,7 +4,7 @@ import static java.lang.System.*;
  * 常用功能
  * @author honoka
  */
-public class ToolUtil {
+public class ToolsUtil {
 	/**
 	 * 判断对象是否非空
 	 * @author honoka
