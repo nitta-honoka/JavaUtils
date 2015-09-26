@@ -1,3 +1,5 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -40,6 +42,15 @@ public class DateUtil {
     }
 
     /**
+     * 返回自定义格式的当前日期
+     * @param pattern
+     * @return
+     */
+    public static String getCurrentTimeByCustomPattern(String pattern) {
+        return new SimpleDateFormat(pattern).format(new Date());
+    }
+
+    /**
      * 返回当前日期
      * @return
      */
@@ -73,5 +84,92 @@ public class DateUtil {
     public static int getCurrentDay() {
         Calendar calendar = Calendar.getInstance();
         return calendar.get(Calendar.DATE);
+    }
+
+    /**
+     * 将指定日期转换为默认格式yyyy-MM-dd
+     * @param date
+     * @return
+     */
+    public static String getTimeByDefaultPattern(Date date) {
+        return new SimpleDateFormat(defaultDatePattern).format(date);
+    }
+
+    /**
+     * 将指定日期转换为自定义格式
+     * @param date
+     * @param pattern
+     * @return
+     */
+    public static String getTimeByCustomPattern(Date date, String pattern) {
+        return new SimpleDateFormat(pattern).format(date);
+    }
+
+    /**
+     * 判断日期是否属于自然季度的末尾月
+     * @param date
+     * @return
+     */
+    public static boolean isEndOfSeason(Date date) {
+        Calendar calendar = getCalender(date);
+        int month = calendar.get(Calendar.MONTH) + 1;
+        if (month % 3 == 2) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 返回指定日期的年份
+     * @param date
+     * @return
+     */
+    public static int getYear(Date date) {
+        Calendar calendar = getCalender(date);
+        return calendar.get(Calendar.YEAR);
+    }
+    /**
+     * 返回指定日期的月份
+     * @param date
+     * @return
+     */
+    public static int getMonth(Date date) {
+        Calendar calendar = getCalender(date);
+        return (calendar.get(Calendar.MONTH) + 1);
+    }
+    /**
+     * 返回指定日期的天数
+     * @param date
+     * @return
+     */
+    public static int getDay(Date date) {
+        Calendar calendar = getCalender(date);
+        return calendar.get(Calendar.DATE);
+    }
+    /**
+     * 日期型转换为字符串
+     *
+     * @param date
+     * @return
+     */
+    public static String convertToString(Date date) {
+        return new SimpleDateFormat("yyyy-MM-dd").format(date);
+    }
+
+    /**
+     * 将自定义格式的字符串转换为日期型
+     * @param dateString 字符串
+     * @param pattern   格式
+     * @return
+     * @throws Exception
+     */
+    public static Date stringToDate(String dateString, String pattern) throws Exception {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        try {
+            Date date = simpleDateFormat.parse(dateString);
+            return date;
+        } catch (ParseException e) {
+            throw new Exception("请检查输入字符串与其格式");
+        }
     }
 }
