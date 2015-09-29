@@ -1,3 +1,5 @@
+package com.cnblogs.honoka.utils;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -21,7 +23,7 @@ public class DateUtil {
 
     /**
      * 返回指定日期的Calendar实例
-     * @param date
+     * @param date 传入日期
      * @return
      */
     public static Calendar getCalender(Date date) {
@@ -32,7 +34,7 @@ public class DateUtil {
 
     /**
      * 返回当天的Calendar实例
-     * @return
+     * @return calendar Calendar实例
      */
     public static Calendar getCurrentCalendar() {
         Date date = new Date();
@@ -43,8 +45,8 @@ public class DateUtil {
 
     /**
      * 返回自定义格式的当前日期
-     * @param pattern
-     * @return
+     * @param pattern 指定的格式
+     * @return 指定格式的日期
      */
     public static String getCurrentTimeByCustomPattern(String pattern) {
         return new SimpleDateFormat(pattern).format(new Date());
@@ -106,7 +108,7 @@ public class DateUtil {
     }
 
     /**
-     * 判断日期是否属于自然季度的末尾月
+     * 判断日期是否属于自然季度的末尾月,3-5月春，6-8月夏，9-11月秋，12-2月冬
      * @param date
      * @return
      */
@@ -147,13 +149,13 @@ public class DateUtil {
         return calendar.get(Calendar.DATE);
     }
     /**
-     * 日期型转换为字符串
-     *
-     * @param date
+     * 日期型转换为自定义格式的字符串
+     * @param pattern 格式
+     * @param date 日期
      * @return
      */
-    public static String convertToString(Date date) {
-        return new SimpleDateFormat("yyyy-MM-dd").format(date);
+    public static String dateToString(Date date, String pattern) {
+        return new SimpleDateFormat(pattern).format(date);
     }
 
     /**

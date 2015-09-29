@@ -1,3 +1,5 @@
+package com.cnblogs.honoka.utils;
+
 import static java.lang.System.*;
 
 /**

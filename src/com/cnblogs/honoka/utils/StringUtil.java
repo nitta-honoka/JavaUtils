@@ -1,3 +1,5 @@
+package com.cnblogs.honoka.utils;
+
 /**
  * 处理字符串
  * @author honoka
